@@ -23,7 +23,7 @@ app.use('/', require('./routes/auth'));
 app.use('/contacts', contactRoutes);
 
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, async () => {
     try {
         await connectDB();
