@@ -1,15 +1,15 @@
-const mongoose = require('mongoose');
-const uri = "mongodb+srv://contactmdb:4VNC0SSbLclk9m27@cluster0.aiqgimm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/contact_manager"
+const mongoose = require("mongoose");
+// const uri = "mongodb+srv://contactmdb:4VNC0SSbLclk9m27@cluster0.aiqgimm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/contact_manager"
+const uri = "mongodb+srv://sathish:Swathi%40123@cluster0.fygopsn.mongodb.net";
 const connectDB = async () => {
-    return mongoose.connect(uri)
+  return mongoose
+    .connect(`${uri}/contact-manager`)
     .then(() => {
-        console.log('Connected to MongoDB');
+      console.log("Connected to MongoDB");
     })
     .catch((error) => {
-        console.log(error)
+      console.log(error);
     });
 };
 
 module.exports = connectDB;
-
-
